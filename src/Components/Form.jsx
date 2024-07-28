@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Details from "./Details";
 
 function Form() {
 
@@ -62,15 +63,7 @@ function Form() {
         </form>
 
 
-{isSubmit&& Object.keys(error).length==0 && <div className="mt-10">
-            <h1 className="text-pink-500 font-medium">Your Details: {formdata.firstName}</h1>
-            <p className="text-pink-500 font-medium" >First Name: {formdata.firstName}</p>
-            <p className="text-pink-500 font-medium">Last Name: {formdata.lastName
-            }</p>
-            <p className="text-pink-500 font-medium" > Education: {formdata.education}</p>
-            <p className="text-pink-500 font-medium">Age: {formdata.age
-            }</p>
-        </div>}
+        {isSubmit&& Object.keys(error).length==0 && <Details prop={formdata}/>}
        
     </div>
   )
