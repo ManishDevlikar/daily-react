@@ -2,6 +2,7 @@
 function Details({prop}) {
     // let fields=Object.keys(prop);
     // let values=Object.values(prop);
+    // let entries=Object.entries(prop);
 
   return (
     <div className="pt-10 w-full">
