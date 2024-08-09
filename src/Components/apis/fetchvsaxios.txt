@@ -1,0 +1,13 @@
+fetch:
+
+Stream Handling: fetch supports streaming of responses, allowing you to read the response body as a stream.
+No Built-In Support for JSON Transformation: You have to explicitly call .json() on the response object to parse JSON data.
+No Request Cancellation: fetch does not have built-in support for request cancellation, though you can use AbortController for this purpose.
+No Interceptors: fetch does not have built-in support for request and response interceptors.
+axios:
+
+Automatic JSON Transformation: axios automatically transforms JSON data for you.
+Request Cancellation: axios supports request cancellation using tokens.
+Interceptors: axios supports request and response interceptors, allowing you to modify requests and responses globally.
+Timeouts: axios allows you to set timeouts for requests easily.
+Error Handling: axios throws an error for non-2xx status codes, making error handling straightforward.
