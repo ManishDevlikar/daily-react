@@ -1,0 +1,12 @@
+"Lifting up state" in React is a common pattern used to share state between multiple components.
+ When you have several components that need to reflect the same changing data,
+  it's best to lift the shared state up to their closest common ancestor.
+   This way, the state is managed in a single place, and the components that need the state can receive it via props.
+
+Steps to Lift State Up:
+Identify the State: Determine what piece of state needs to be shared between components.
+Find the Closest Common Ancestor: Identify the closest common ancestor component of all the components that need access to this state.
+Move the State to the Ancestor: Move the state to the closest common ancestor. This component will manage the state.
+Pass the State as Props: Pass the state down to the child components that need it via props.
+Update the State via Callback Functions: If the child components need to update the state,
+ pass callback functions from the ancestor component that can be called by the children.
