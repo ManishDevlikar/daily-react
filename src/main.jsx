@@ -6,6 +6,7 @@ import Counter from './Components/Counter/Counter.jsx'
 import BG from './Components/BGChanger/BG.jsx'
 import Carousel from './Components/carouselslider/Carousel.jsx'
 import Lifting from './Components/LiftingStateUp/Lifting.jsx'
+import Todo from './Components/Todo/Todo.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <Counter/> */}
     {/* <BG/> */}
     {/* <Carousel/> */}
-    <Lifting/>
+    {/* <Lifting/> */}
+    <Todo/>
   </React.StrictMode>,
 )
