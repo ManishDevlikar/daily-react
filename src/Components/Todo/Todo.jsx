@@ -13,8 +13,10 @@ function Todo(){
         content:"",
         check:false,
     });
-    const[todos,setTodos]=useState([]);
-
+    const[todos,setTodos]=useState(()=>{
+        const localData=localStorage.getItem("todo-app");
+        return localData?JSON.parse(localData):[];
+    });
 
    const addTodo=function(){
     if(text.content===''){
@@ -39,8 +41,12 @@ function Todo(){
         check:false,});   
 }
 
+
+// adding to local storage
+localStorage.setItem("todo-app",JSON.stringify(todos));
+
     const deleteAll = function(){
-        setTodos([{}]);
+        setTodos([]);
     }
 
     const deleteTodo=function(todoId){
