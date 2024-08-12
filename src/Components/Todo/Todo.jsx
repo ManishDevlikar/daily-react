@@ -15,7 +15,8 @@ function Todo(){
     });
     const[todos,setTodos]=useState(()=>{
         const localData=localStorage.getItem("todo-app");
-        return localData?JSON.parse(localData):[];
+        // same as return localData?JSON.parse(localData):[];
+        return JSON.parse(localData)??[];
     });
 
    const addTodo=function(){
