@@ -1,67 +1,96 @@
 import React from "react";
-import { useState,useEffect } from "react";
+import { useState } from "react";
 import DateC from "./DateC.jsx";
 import Header from "./Header.jsx";
+import Input from "./Input.jsx";
+import EditTodo from "./EditTodo.jsx";
+import ListItem from "./ListItem.jsx";
+
+
 function Todo(){
-   let  date = new Date();
-   const [text,setText]=useState("");
-   const[todos,setTodos]=useState([]);
+    const [text,setText]=useState({
+        id:"",
+        content:"",
+        check:false,
+    });
+    const[todos,setTodos]=useState([]);
+
+
    const addTodo=function(){
-    if(text===''){
+    if(text.content===''){
         alert('Please enter a todo');
         return;
     }
-    if(todos.includes(text)){
-        alert('Todo already exists');
-        setText("");
+
+    const isContentExist=todos.find(todo=>todo.content===text.content);
+    if(isContentExist){
+        alert("content alraedy exist")
+        setText({  id:"",
+                   content:"",
+                   check:false,
+                });
         return;
-    } 
-    setTodos((prev)=>[...prev , text])
-    setText("");   
+    }
+
+    const {id,content,check} = text;
+    setTodos((prev)=>[...prev , {id,content,check}])
+    setText( { id:"",
+        content:"",
+        check:false,});   
 }
 
-   const [getDate, setgetDate] = useState({
-    hour:date.getHours(),
-    minute:date.getMinutes(),
-    sec:date.getSeconds()
-   })
-   useEffect(() => {
-  const intervalId= setInterval(() => {
-        setgetDate({hour:date.getHours(),minute:date.getMinutes(),sec:date.getSeconds()})
-       }, 1000);
-       return ()=>clearInterval(intervalId);
-   }, [])
- 
+    const deleteAll = function(){
+        setTodos([{}]);
+    }
+
+    const deleteTodo=function(todoId){
+        const updatedTodos=todos.filter(t=>t.id!==todoId);
+        setTodos(updatedTodos);
+    }
+
+ const checkTodo = function(val){
+  const updatedTodos= todos.map((todo)=>{
+        if(todo.content===val.content){
+           return { ...todo, check:!todo.check}
+        }else{
+            return todo
+        }     
+    })
+    setTodos(updatedTodos);
+    console.log(...updatedTodos);
+    
+ } 
+
+
     return (
         <>
+    
             <div className="w-[80%] m-auto flex flex-col">
                 <Header/>
-                <DateC date={date} getDate={getDate} />
+                <DateC/>
             </div>
 
-            <div className="w-[80%] m-auto flex justify-center align-middle gap-4 mt-16">
-                <input
-                    className="w-[40%] bg-white text-black text-[1.5rem] outline-none pl-1 rounded-md placeholder:text-red-300" 
-                    type="text" 
-                    value={text}
-                    onChange={(e)=>setText(e.target.value)} 
-                    placeholder="Enter your todo"
-                />
-                <button
-                className="bg-red-900 w-32 text-white py-3 rounded-md" 
-                onClick={addTodo}
-                >Add</button>
+            <div className="w-[80%] m-auto flex justify-center align-middle gap-4 mt-16 ">
+               <Input text={text} setText={setText}/>
+               <EditTodo editIt={addTodo} func="Add"/>
             </div>
 
-            <div className="mt-[5rem]">
-            <ul className="w-[40%] m-auto flex flex-col align-middle justify-center gap-1">
-                {todos.length>0 && todos.map((todo,key)=>{
-                    return(
-                        <li className="flex justify-between p-[0.8rem] bg-white border-red-200 border-2 rounded-md text-black" key={key}>{todo}  
-                        <div className="flex gap-3"><span className="btn-c-d">check</span> <span className="btn-c-d">delete</span></div></li> 
-                    )
-                })}
-            </ul>
+            <div className="w-[100%] mt-[2rem] flex flex-col items-center justify-center gap-4 ">
+                <ul className="w-[30%] m-auto flex flex-col gap-1 ">
+                    {todos.length>0 && todos.map((todo)=>{
+                        return(
+                            <ListItem key={todo.id} 
+                            todo={todo} 
+                            deleteTodo={deleteTodo}
+                            check={todo.check}
+                            checkTodo={checkTodo}    
+                            />
+                        )
+                    })}
+                </ul>
+                {todos.length>0 && <EditTodo editIt={deleteAll} func="Delete All"/>}
+            </div>
+                <div className="m-auto w-[90%] h-[90vh] bg-red-500 -z-10 absolute top-0 right-0 left-0 clip-path-cross-cut">
             </div>
         </>
     )

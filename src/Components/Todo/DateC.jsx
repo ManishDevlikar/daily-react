@@ -1,15 +1,20 @@
+import { useEffect, useState } from "react";
 
 
-function DateC({ date, getDate }) {
+function DateC() {
+    const [currDate, setCurrDate] = useState("")
+    useEffect(() => {
+        const intervalId= setInterval(() => {
+        let  date = new Date();
+        setCurrDate(`${date.toLocaleDateString()}-${date.toLocaleTimeString()}`)
+       }, 1000);
+       return ()=>clearInterval(intervalId);
+   }, [])
+
     return (
         <>
-
-        {/* date.toLocalTimeString()  to get current time*/}
-
-        <p className="text-white self-center text-base font-bold">
-            {`${date.getDate()}/${date.getMonth()}/${date.getUTCFullYear()} - ${getDate.hour}:${getDate.minute}:`}
-            <span className="text-red-700">{`${getDate.sec}`}</span>
-        </p>
+        <p className="text-red-900 self-center text-base font-bold">
+            {`${currDate}`}</p>
         </>
     )
 }
