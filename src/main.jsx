@@ -7,6 +7,7 @@ import BG from './Components/BGChanger/BG.jsx'
 import Carousel from './Components/carouselslider/Carousel.jsx'
 import Lifting from './Components/LiftingStateUp/Lifting.jsx'
 import Todo from './Components/Todo/Todo.jsx'
+import { UseRefEx } from './Components/useRef/UseRefEx.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <BG/> */}
     {/* <Carousel/> */}
     {/* <Lifting/> */}
-    <Todo/>
+    {/* <Todo/> */}
+    <UseRefEx/>
   </React.StrictMode>,
 )
