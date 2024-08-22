@@ -1,0 +1,3 @@
+The useRef hook in React is used to persist values across renders without causing a re-render when the value changes.
+It's commonly used to reference DOM elements directly, 
+store mutable values that do not trigger re-renders, and hold a value that can be updated without re-rendering the component.

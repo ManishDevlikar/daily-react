@@ -8,6 +8,7 @@ import Carousel from './Components/carouselslider/Carousel.jsx'
 import Lifting from './Components/LiftingStateUp/Lifting.jsx'
 import Todo from './Components/Todo/Todo.jsx'
 import { UseRefEx } from './Components/useRef/UseRefEx.jsx'
+import { ForwardRefEx } from './Components/forwardRef/ForwardRefEx.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <Carousel/> */}
     {/* <Lifting/> */}
     {/* <Todo/> */}
-    <UseRefEx/>
+    {/* <UseRefEx/> */}
+    <ForwardRefEx/>
   </React.StrictMode>,
 )

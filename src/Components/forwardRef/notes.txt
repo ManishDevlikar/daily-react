@@ -1,0 +1,9 @@
+The forwardRef hook in React is used to pass a ref from a parent component down to a child component, 
+allowing the parent component to directly access a DOM element or a component's instance in the child. 
+It's commonly used when you want to allow parent components to interact with the child component's DOM or instance methods.
+
+
+Why Use forwardRef?
+In normal circumstances, refs cannot be passed down to child components,
+ because refs only work directly on DOM elements or class components. 
+When you need to pass a ref to a functional component, forwardRef enables this functionality.
