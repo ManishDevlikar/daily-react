@@ -1,0 +1,15 @@
+Prop drilling in React is the process of passing data from a parent component to a deeply nested child component 
+through multiple layers of intermediate components, even if those intermediate components do not need the data themselves. 
+This can lead to less maintainable and harder-to-read code, especially in larger applications.
+
+Problems with Prop Drilling:
+Redundancy: Passing props through components that don’t need them.
+Maintenance: If the structure changes or new props are required, you have to update multiple components.
+Readability: The code becomes harder to follow as the prop needs to be traced through multiple layers.
+
+Solutions:
+Context API: React's Context API allows you to share data across the entire component tree without prop drilling. 
+You can define a context and wrap your components so that any component can consume the data it needs.
+
+State Management Libraries: Libraries like Redux, MobX, or Zustand can help manage state globally in larger applications, 
+reducing the need for prop drilling.

@@ -10,6 +10,7 @@ import Todo from './Components/Todo/Todo.jsx'
 import { UseRefEx } from './Components/useRef/UseRefEx.jsx'
 import { ForwardRefEx } from './Components/forwardRef/ForwardRefEx.jsx'
 import { UseIdEx } from './Components/useId/UseIdEx.jsx'
+import { User } from './Components/propDrilling/User.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <Todo/> */}
     {/* <UseRefEx/> */}
     {/* <ForwardRefEx/> */}
-    <UseIdEx/>
+    {/* <UseIdEx/> */}
+    <User/>
   </React.StrictMode>,
 )
