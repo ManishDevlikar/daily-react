@@ -15,10 +15,11 @@ import {UserProvider } from './Components/ContexApi/UserContex.jsx'
 import HomeConsumer from './Components/ContexApi/HomeConsumer.jsx'
 import FooterConsumer from './Components/ContexApi/FooterConsumer.jsx'
 import App from './Components/ContexApi/App.jsx'
+import LogApp from './Components/CustomHook/LogApp.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App/>
+    <LogApp/>
     {/* <Form /> */}
     {/* <Counter/> */}
     {/* <BG/> */}
