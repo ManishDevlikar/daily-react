@@ -1,4 +1,4 @@
-The use hook is part of an experimental API in React and is often associated with React Server Components,
+The use() hook is part of an experimental API in React and is often associated with React Server Components,
  introduced to simplify data fetching within components. Here's a comprehensive breakdown of how it works and when to use it.
 
 What is the use Hook?
