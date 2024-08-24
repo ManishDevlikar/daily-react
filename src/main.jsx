@@ -11,9 +11,14 @@ import { UseRefEx } from './Components/useRef/UseRefEx.jsx'
 import { ForwardRefEx } from './Components/forwardRef/ForwardRefEx.jsx'
 import { UseIdEx } from './Components/useId/UseIdEx.jsx'
 import { User } from './Components/propDrilling/User.jsx'
+import {UserProvider } from './Components/ContexApi/UserContex.jsx'
+import HomeConsumer from './Components/ContexApi/HomeConsumer.jsx'
+import FooterConsumer from './Components/ContexApi/FooterConsumer.jsx'
+import App from './Components/ContexApi/App.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <App/>
     {/* <Form /> */}
     {/* <Counter/> */}
     {/* <BG/> */}
@@ -23,6 +28,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <UseRefEx/> */}
     {/* <ForwardRefEx/> */}
     {/* <UseIdEx/> */}
-    <User/>
+    {/* <User/> */}
   </React.StrictMode>,
 )
