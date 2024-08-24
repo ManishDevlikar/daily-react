@@ -9,6 +9,7 @@ import Lifting from './Components/LiftingStateUp/Lifting.jsx'
 import Todo from './Components/Todo/Todo.jsx'
 import { UseRefEx } from './Components/useRef/UseRefEx.jsx'
 import { ForwardRefEx } from './Components/forwardRef/ForwardRefEx.jsx'
+import { UseIdEx } from './Components/useId/UseIdEx.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -19,6 +20,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     {/* <Lifting/> */}
     {/* <Todo/> */}
     {/* <UseRefEx/> */}
-    <ForwardRefEx/>
+    {/* <ForwardRefEx/> */}
+    <UseIdEx/>
   </React.StrictMode>,
 )

@@ -1,0 +1,9 @@
+The useId hook in React is a built-in hook introduced in React 18. 
+It generates a unique ID that you can use for accessibility attributes, 
+like id and htmlFor, or for other purposes where a unique identifier is required.
+
+When to Use useId
+Accessibility: It's commonly used to link form inputs to their labels with the htmlFor attribute, 
+ensuring proper association between the label and input.
+SSR (Server-Side Rendering): Since useId guarantees unique IDs during both server-side and client-side rendering,
+it's particularly useful in server-rendered applications to avoid hydration mismatches.
