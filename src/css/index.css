@@ -7,3 +7,7 @@
       @apply border-[0.2px] border-red-400 rounded-full text-[8px] text-center cursor-pointer p-[0.2rem] bg-red-900
     }
 }
+
+/* body{
+  @apply bg-white dark:bg-black
+} */

@@ -16,10 +16,12 @@ import HomeConsumer from './Components/ContexApi/HomeConsumer.jsx'
 import FooterConsumer from './Components/ContexApi/FooterConsumer.jsx'
 import App from './Components/ContexApi/App.jsx'
 import LogApp from './Components/CustomHook/LogApp.jsx'
+import ThemeApp from './Components/Theme/ThemeApp.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <LogApp/>
+    {/* <LogApp/> */}
+    <ThemeApp/>
     {/* <Form /> */}
     {/* <Counter/> */}
     {/* <BG/> */}
