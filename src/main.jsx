@@ -17,11 +17,15 @@ import FooterConsumer from './Components/ContexApi/FooterConsumer.jsx'
 import App from './Components/ContexApi/App.jsx'
 import LogApp from './Components/CustomHook/LogApp.jsx'
 import ThemeApp from './Components/Theme/ThemeApp.jsx'
+import CounterApp from './Components/UseReducer/CounterApp.jsx'
+import FormApp from './Components/UseReducer/FormApp.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* <LogApp/> */}
-    <ThemeApp/>
+    <FormApp/>
+    {/* <CounterApp/> */}
+    {/* <ThemeApp/> */}
     {/* <Form /> */}
     {/* <Counter/> */}
     {/* <BG/> */}
