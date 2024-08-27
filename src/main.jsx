@@ -19,11 +19,13 @@ import LogApp from './Components/CustomHook/LogApp.jsx'
 import ThemeApp from './Components/Theme/ThemeApp.jsx'
 import CounterApp from './Components/UseReducer/CounterApp.jsx'
 import FormApp from './Components/UseReducer/FormApp.jsx'
+import CounterWithMemo from './Components/ReactMemo/CounterWithMemo.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     {/* <LogApp/> */}
-    <FormApp/>
+    {/* <FormApp/> */}
+    <CounterWithMemo/>
     {/* <CounterApp/> */}
     {/* <ThemeApp/> */}
     {/* <Form /> */}

@@ -1,0 +1,11 @@
+React.memo() is a higher-order component (HOC) in React that optimizes performance by preventing unnecessary
+ re-renders of functional components. It works by memoizing the result of a component's render,
+  meaning it only re-renders the component if its props change.
+   This can be particularly useful for components that are expensive to render or that don't need to update unless their props change.
+
+How React.memo() Works
+Here's how React.memo() works:
+
+Initial Render: When the component renders for the first time, React.memo stores the result.
+Subsequent Renders: On subsequent renders, React.memo compares the new props with the previous ones.
+ If the props are the same, the component doesn't re-render; if the props have changed, the component re-renders.
